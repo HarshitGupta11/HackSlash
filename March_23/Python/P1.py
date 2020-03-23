@@ -18,15 +18,12 @@ def get_score():
                 c+=1
     base=max(len(code_dict),2)
     #secs=float(0)
-    min_secs=10**18
-    for b in range(base,36):
-        secs=0
-        c=0
-        for j in range(len(code)-1,-1,-1):
-            secs+=((b**c)*code_dict[code[j]])
-            c+=1
-        min_secs=min(min_secs,secs)
-    print(min_secs)
+    secs=0
+    c=0
+    for j in range(len(code)-1,-1,-1):
+        secs+=((base**c)*code_dict[code[j]])
+        c+=1
+    print(secs)
     #print(int(10**18))
     
 def main():
