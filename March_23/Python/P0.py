@@ -1,3 +1,5 @@
+#What's the sepratist planning
+
 def get_pats(pat_dict,spc):
     pattern=input()
     pat_split=[]
