@@ -1,20 +1,12 @@
-#Finding Pairs
+#Finding Pairs - tushar pandey
 
-def print_op():
-    n=int(input())
-    temp=input()
-    c=0
-    arr=[int(x) for x in temp.split()]
-    for i in range(n):
-        for j in range(i,n):
-            if arr[i]==arr[j]:
-                c+=1
-    print(c)
-
-
-def main():
-    n=int(input())
-    for j in range(n):
-        print_op()
-
-main()
+n_iter = int(input())
+for i in range(n_iter):
+    N = int(input())
+    arr = [int(x) for x in input().split()]
+    count = 0
+    for i, e in enumerate(arr):
+        for e1 in arr[i:]:
+            if e1 == e:
+                count += 1
+    print(count)
