@@ -1,0 +1,142 @@
+FIND PAIRS:
+Given an array A of N numbers, find the number of distinct pairs (i, j) such that j >=i and A[i] = A[j].
+
+Input First line of the input contains number of test cases T. Each test case has two lines, first line is the number N, followed by a line consisting of N integers which are the elements of array A.
+
+output For each test case print the number of distinct pairs.
+
+Limits
+
+1 <= T <= 10
+
+1 <= N <= 10^6
+
+-10^6 <= A[i] <= 10^6 for 0 <= i < N
+
+Sample Input:
+2
+4
+1 2 3 4
+3
+1 2 1
+
+Sample Output:
+4
+4
+
+WHAT IS THE SEPARATIST PLANNING?
+
+Before the Battle of Kamino the Confederacy of Independent Systems developed the a way to communicate with the far systems. This way is very unique as every word consists of exactly L lowercase letters. Also, there are exactly D words in this.
+
+Jedi order intercept these messages and built a dictionary out of it. Now they have to dechiper it to get the messages the Confederacy of Independent Systems transmitting. Unfortunately, these signals are not intercepted properly and some of the words may be misinterpreted. In order to help them decipher these messages, the Jedi order have asked you to devise an algorithm that will determine the number of possible interpretations for a given pattern.
+
+A pattern consists of exactly L tokens. Each token is either a single lowercase letter (the Jedi are very sure that this is the letter) or a group of unique lowercase letters surrounded by parenthesis ( and ). For example: (ab)d(dc) means the first letter is either a or b, the second letter is definitely d and the last letter is either d or c. Therefore, the pattern (ab)d(dc) can stand for either one of these 4 possibilities: add, adc, bdd, bdc.
+
+Input
+
+The first line of input contains 3 integers, L, D and N separated by a space. D lines follow, each containing one word of length L. These are the words that are known to exist in the message. N test cases then follow, each on its own line and each consisting of a pattern as described above. You may assume that all known words provided are unique.
+
+Output
+
+For each test case, output should be K indicating how many words in the message match the pattern.
+
+Limits
+
+1 ≤ L ≤ 15 1 ≤ D ≤ 5000 1 ≤ N ≤ 500
+
+Sample Input:
+3 5 4
+abc
+bca
+dac
+dbc
+cba
+(ab)(bc)(ca)
+abc
+(abc)(abc)(abc)
+(zyx)bc
+
+Sample Output:
+
+2
+1
+3
+0
+
+PRISON BREAK
+Alfie was a prisoner in Mythland. Though Alfie was a witty and intelligent guy. He was confident of escaping prison. After a few days of observation, He figured out that the prison consists of (N×N) cells. i.e The shape of the prison was (N×N) matrix. Few of the cells of the prison contained motion detectors. So Alfie planned that while escaping the prison he will avoid those cells containing motion detectors. Yet before executing his plan, Alfie wants to know the total number of unique possible paths that he can take to escape the prison. Initially, Alfie is in cell
+(1,1) while the exit of the cell (N, N).
+
+note:->Alfie can move in all four directions { if his current location is (X, Y), he can move to either
+(X+1,Y), (X−1,Y), (X,Y+1), (X,Y−1) }. If the first cell (1,1) and the last cell(N, N) contain motion detectors, then Alfie can't break out of the prison.
+
+INPUT:
+
+The first line contains a number of test cases "T".T test cases follow. The first line of each test case contains an integer "N",(i.e the size of the (N×N) matrix). The next n lines contain N space-separated values either 0 or 1."1" represents a cell containing motion detectors.
+
+OUTPUT:
+
+output total number of unique possible paths that he can take to escape the prison.
+
+CONSTRAINTS:
+
+No Diagonal movement.
+
+Sample Input:
+3         
+4         
+0 1 1 0    
+0 0 1 0 
+0 0 0 0 
+0 1 1 0 
+4
+0 0 0 1 
+0 0 0 0 
+1 1 1 0 
+1 0 0 0 
+4
+0 1 1 0 
+0 0 1 1 
+0 0 0 0 
+0 1 0 0 
+
+Sample Output:
+2         
+4
+4
+
+WHEN IS THE SEPARATIST's NEXT ATTACK?
+Always finding new ways to destroy the Republic forces by surprise attacks.
+
+Now they trapped the Republic fleet near the Abregado system. They have developed a way to communicate through the encrypted message to its fleet around the Abregado system.
+
+They wrote a message in a cryptic language, and next to it they wrote a series of symbols. Republic fleet intercept these messages and concluded that the symbols indicate a number: the number of seconds before they launch next surprise attack on them!
+
+Unfortunately Republic Fleet have no idea what each symbol means. They have decided that each symbol indicates one digit, but they aren't sure what each digit means or what base the Separatists are using. For example, if Separatist wrote "ab2ac999", they could have meant "31536000" in base 10 -- exactly one year -- or they could have meant "12314555" in base 6 -- 398951 seconds, or about four and a half days. Republic fleet are sure of three things: the number is positive; like us, the Separatists will never start a number with a zero; and they aren't using unary (base 1).
+
+Your job is to determine the minimum possible number of seconds they launch next surprise attack on them.
+
+Input
+
+The first line of input contains a single integer, T. T test cases follow. Each test case is a string on a line by itself. The line will contain only characters in the 'a' to 'z' and '0' to '9' ranges (with no spaces and no punctuation), representing the message by Separatists. The test cases are independent, and can be in different bases with the symbols meaning different things.
+
+Output
+
+For each test case, output V the minimum number of seconds before the next surprise attack.
+
+Limits
+
+1 ≤ T ≤ 100 The answer will never exceed 10^18
+
+1 ≤ the length of each line < 61
+
+Sample Input:
+3
+11001001
+cats
+zig
+
+Sample Output:
+201
+75
+11
