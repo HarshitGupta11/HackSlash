@@ -14,14 +14,14 @@ int solve(vi& a) {
 	}
 	int res = 0;
 	for (auto t : m) {
-		res += t.second-1;
+		res += (t.second-1)*(t.second);
 	}
-	return n+res;
+	return n+res/2;
 }
 int main() {
 	int TC;
-	vi output;
-	cin >> TC;
+	cin>>TC;
+	vi output(TC);
 	for (int q = 0; q < TC; q++) {
 		int n;
 		cin >> n;
@@ -29,7 +29,7 @@ int main() {
 		for (int i = 0; i < n; i++) {
 			cin >> arr[i];
 		}
-		output.push_back(solve(arr));
+		output[q] = solve(arr);
 	}
 	for (auto t : output) {
 		cout << t << endl;
