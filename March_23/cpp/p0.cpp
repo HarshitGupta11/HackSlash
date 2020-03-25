@@ -15,7 +15,7 @@ ll solve(vi& a) {
 	}
 	ll res = 0;
 	for (auto t : m) {
-		res += (t.second-1)*(t.second);
+		res += (ll)(t.second-1)*(t.second);
 	}
 	return n+res/2;
 }
