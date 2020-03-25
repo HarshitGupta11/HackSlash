@@ -5,14 +5,15 @@ using namespace std;
 
 typedef unordered_map<int, int> umap;
 typedef vector<int> vi;
+typedef long long ll;
 
-int solve(vi& a) {
+ll solve(vi& a) {
 	int n = a.size();
 	umap m;
 	for (auto t : a) {
 		m[t] += 1;
 	}
-	int res = 0;
+	ll res = 0;
 	for (auto t : m) {
 		res += (t.second-1)*(t.second);
 	}
