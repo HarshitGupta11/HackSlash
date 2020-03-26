@@ -6,7 +6,7 @@
 
 using namespace std;
 
-typedef unordered_map<int, int> umap;				// type substitutes for readability.
+typedef unordered_map<int, int> umap;				
 typedef vector<int> vi;
 typedef long long ll;
 
